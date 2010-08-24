@@ -1,0 +1,358 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #666666;
+}
+
+h1, h2, h3, h4, h5, h6, form {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+}
+
+h4, h5, h6 {
+}
+
+p, ul, ol, blockquote {
+    margin-top: 0;
+}
+
+a {
+    color: #268ED4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: none;
+}
+
+/* Header */
+
+#header {
+    height: 40px;
+    background: #5A5A5A url(images/img01.gif) repeat-x;
+}
+
+#header h1 {
+    width: 760px;
+    margin: 0 auto;
+    padding: 3px 0 0 0;
+    font-size: 2em;
+}
+
+#header h2 {
+    width: 760px;
+    margin: -18px auto 0 auto;
+    text-align: right;
+    font-size: 1em;
+    color: #EEEEEE;
+}
+
+#header a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Pages */
+
+#pages {
+    height: 310px;
+    padding-top: 10px;
+    background: url(images/img02.gif) repeat-x;
+}
+
+#pages h2 {
+    display: none;
+}
+
+#pages ul {
+    display: block;
+    width: 760px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#pages li {
+    display: inline;
+}
+
+#pages a {
+    display: block;
+    float: left;
+    width: 152px;
+    height: 75px;
+    padding: 35px 0 0 0;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: -1px;
+    font-size: 1.6em;
+    font-weight: normal;
+    color: #333333;
+}
+
+#pages a:hover {
+    color: #000000;
+}
+
+#page1 { background: #E5FAA1 url(images/img03.gif) no-repeat; }
+#page2 { background: #97F0E6 url(images/img04.gif) no-repeat; }
+#page3 { background: #F3B6CE url(images/img05.gif) no-repeat; }
+#page4 { background: #FADDA1 url(images/img06.gif) no-repeat; }
+#page5 { background: #C9CDFF url(images/img07.gif) no-repeat; }
+
+#page1:hover, #pages .selected #page1 { background-image: url(images/img08.gif); }
+#page2:hover, #pages .selected #page2 { background-image: url(images/img09.gif); }
+#page3:hover, #pages .selected #page3 { background-image: url(images/img10.gif); }
+#page4:hover, #pages .selected #page4 { background-image: url(images/img11.gif); }
+#page5:hover, #pages .selected #page5 { background-image: url(images/img12.gif); }
+
+/* Content */
+
+#content {
+    width: 760px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+
+/* Latest Post Box */
+
+#latest-post {
+    float: left;
+    width: 400px;
+}
+
+#latest-post .title {
+    letter-spacing: -1px;
+    font-size: 2.2em;
+}
+
+#latest-post .posted {
+    margin-bottom: 2em;
+    font-size: .8em;
+    font-weight: normal;
+}
+
+#latest-post .image {
+    float: left;
+    margin: .3em 1em 0 0;
+}
+
+#latest-post p, #latest-post blockquote, #latest-post ul, #latest-post ol {
+    line-height: 155%;
+}
+
+/* Recent Posts Box */
+
+#recent-posts {
+    float: right;
+    width: 320px;
+}
+
+#recent-posts h3 {
+    width: 310px;
+    height: 32px;
+    padding: 12px 0 0 10px;
+    background: #5A5A5A url(images/img13.gif);
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+#recent-posts ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#recent-posts li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #5A5A5A;
+}
+
+#recent-posts li:hover {
+    background: #EFEFEF;
+}
+
+/* Column One */
+
+#colOne {
+    padding-bottom: 20px;
+}
+
+/* Column Two */
+
+#colTwo {
+    padding: 20px;
+    background: url(images/img02.gif) repeat-x;
+}
+
+#colTwo ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#colTwo li, #colTwo form {
+    padding: 10px;
+}
+
+#colTwo li {
+    display: block;
+    float: left;
+    width: 220px;
+}
+
+#colTwo li ul {
+}
+
+#colTwo li li {
+    display: list-item;
+    float: none;
+    padding: 0 0 0 10px;
+}
+
+#colTwo h2 {
+    margin: 0 0 .5em 0;
+    padding: 0 0 0 10px;
+    background: url(images/img15.gif) no-repeat left center;
+    font-size: 1em;
+}
+
+/* Footer */
+
+#footer {
+    width: 720px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+    background: url(images/img02.gif) repeat-x;
+}
+
+#footer p {
+    text-align: center;
+    font-size: x-small;
+}
+
+#message, #flash {
+    padding: 8px 8px 8px 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.flash_notice, .flash_message {
+    border: 1px solid #00A017;
+    color: #00A017;
+    background: 7px 7px no-repeat url('/images/refinery/icons/accept.png') #E0F5E0;
+}
+.flash_notice, .flash_notice * {
+    color: #00A017;
+}
+.flash_error {
+    border: 1px solid #A00027;
+    color: #A00027;
+    background: 7px 7px no-repeat url('/images/refinery/icons/cancel.png') #FFB1B1;
+}
+#flash.flash_notice #flash_close, #flash.flash_error #flash_close {
+    text-transform: lowercase;
+}
+#flash.flash_message {
+    background: #E0F5E0;
+    padding: 9px;
+    position: relative;
+    margin-bottom: 32px;
+}
+#flash.flash_message h2 {
+    margin-top: 12px;
+}
+.flash_message, .flash_message * {
+    color: #262719;
+    font-size: 14px;
+}
+#flash a, #flash a:hover {
+    color: #e20003;
+    border-bottom-color: #e20003;
+}
+#flash.flash_error a, #flash.flash_error a:hover {
+    display: none;
+}
+#flash a#flash_close {
+    position: absolute;
+    right: 9px;
+    top: 7px;
+}
+#flash.flash_message a#flash_close {
+    top: 21px;
+}
+
+
+
+#slider {
+    width: 760px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/*slider css*/
+
+#slider {
+    position: relative; /* important */
+    overflow: hidden; /* important */
+}
+
+#sliderContent {
+    width: 760px; /* important to be same as image width or wider */
+    position: absolute;
+    top: 0;
+    margin-left: 0;
+}
+.sliderImage {
+    float: left;
+    position: relative;
+    display: none;
+}
+.sliderImage span {
+    position: absolute;
+    font: 10px/15px Arial, Helvetica, sans-serif;
+    padding: 10px 13px;
+    width: 760px;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    color: #fff;
+    display: none;
+}
+.clear {
+    clear: both;
+}
+.sliderImage span strong {
+    font-size: 14px;
+}
+.left {
+    top: 0;
+    left: 0;
+    width: 110px !important;
+    height: 280px;
+}
+.right {
+    right: 0;
+    bottom: 0;
+    width: 150px !important;
+    height: 180px;
+}

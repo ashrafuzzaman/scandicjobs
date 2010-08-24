@@ -1,0 +1,61 @@
+<% js_caching = RefinerySetting.find_or_set(:use_resource_caching, Rails.root.join('public', 'javascripts', 'cache').writable?) -%>
+<% content_for :head do %>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <%#= jquery_include_tags(:caching => js_caching) %>
+  <script type="text/javascript" src="/theme/javascripts/s3Slider.js"></script>
+
+  <script type='text/javascript'>
+    $(document).ready(function() {
+      //initializing the slider
+      $('#slider').s3Slider({
+        timeOut: 4000
+      });
+
+      //initializing the flash message
+      $('#flash').show();
+      $('#flash').click(function(e) {
+        $('#flash').hide();
+      });
+    });
+
+  </script>
+<% end %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <%= render :partial => "/shared/head", :locals => {:theme => true} %>
+  <body>
+    <%= render :partial => "/shared/site_bar" %>
+    <div id="header">
+      <h1><a href="#"><%= RefinerySetting.find_or_set(:site_name, "Nordic jobs") %></a></h1>
+      <h2><%= RefinerySetting.find_or_set(:slogan, "Slogan") %></h2>
+    </div>
+    <div id="pages">
+      <div id="slider">
+        <ul id="sliderContent">
+          <li class="sliderImage">
+            <img width="760" height="200" src="/theme/stylesheets/images/nordic_scenery.jpg"></img>
+            <span class="right"><strong>Title text 1</strong><br />Content text...</span>
+          </li>
+          <li class="sliderImage">
+            <img width="760" height="200" src="/theme/stylesheets/images/nordic_scenery.jpg"></img>
+            <span class="right"><strong>Title text 1</strong><br />Content text...</span>
+          </li>
+        </ul>
+      </div>
+      <%= render :partial => 'shared/menu' %>
+    </div>
+    <div id="content">
+      <div id="colOne">
+        <div id="flash_container">
+          <%= render :partial => "/shared/message" %>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+    <div id="footer">
+      <p><%= RefinerySetting.find_or_set(:copyright, "Copyright &copy; 2010 to nordic job") %></p>
+    </div>
+  </body>
+</html>
+
