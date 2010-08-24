@@ -1,0 +1,41 @@
+<div id='actions'>
+  <ul>
+    <li>
+      <%= render :partial => "/shared/admin/search", :locals => {:url => admin_job_categories_url} %>
+    </li>
+    <li>
+      <%= link_to "Create New Job Category", new_admin_job_category_url, :class => "add_icon" %>
+    </li>
+  <% if !searching? and JobCategory.count > 1 %>
+    <li>
+      <%= link_to t('refinery.reorder', :what => "Job Categories"), admin_job_categories_url, :id => "reorder_action", :class => "reorder_icon" %>
+      <%= link_to t('refinery.reorder_done', :what => "Job Categories"), admin_job_categories_url, :id => "reorder_action_done", :style => "display: none;", :class => "reorder_icon" %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+<div id='records'>
+  <% if searching? %>
+    <h2><%= t('admin.search_results_for', :query => params[:search]) %></h2>
+    <% if @job_categories.any? %>
+      <%= render :partial => "job_category", :collection => @job_categories %>
+    <% else %>
+      <p><%= t('.search_no_results') %></p>
+    <% end %>
+  <% else %>
+    <% if @job_categories.any? %>
+      <%= will_paginate @job_categories, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+       <ul id='sortable_list'>
+        <%= render :partial => "sortable_list" %>
+       </ul>
+      <%= will_paginate @job_categories, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+    <% else %>
+      <p>
+        <strong>
+          <%= t('.no_items_yet') %>
+        </strong>
+      </p>
+    <% end %>
+  <% end %>
+</div>
+<%= render :partial => "/shared/admin/make_sortable", :locals => {:tree => false } if !searching? and JobCategory.count > 1 %>

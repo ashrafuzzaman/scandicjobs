@@ -354,5 +354,10 @@ img {
     right: 0;
     bottom: 0;
     width: 150px !important;
-    height: 180px;
+    height: 190px;
+}
+
+.inquiries label {
+    width: 100px;
+    float: left;
 }

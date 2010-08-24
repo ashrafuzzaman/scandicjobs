@@ -1,0 +1,44 @@
+<% form_for [:admin, @employer] do |f| -%>
+  <%= f.error_messages %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :phone -%>
+    <%= f.text_field :phone -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :address -%>
+    <%= f.text_area :address, :size => "100x10" -%>
+  </div>
+
+  <div class='field'>
+    <%= render :partial => "/job_categories/select", :locals => {:f => f} %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :working_period -%>
+    <%= f.select(:working_period, ["Full time", "Part time"], :prompt => 'Select') %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :about_job -%>
+    <%= f.text_area :about_job, :size => "100x10" -%>
+  </div>
+
+  <%= render :partial => "/shared/admin/form_actions", :locals => {:f => f, :continue_editing => false} %>
+<% end -%>

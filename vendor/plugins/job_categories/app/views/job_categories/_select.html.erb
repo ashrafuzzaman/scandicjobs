@@ -1,0 +1,12 @@
+<%= f.label :job_category -%>
+<%= f.select(:job_category_id, JobCategory.find(:all).collect {|jc| [jc.title, jc.id]}, {:prompt => 'Select'}, {:class => "job_category_event_trigger"}) %>
+<%= f.select(:job_sub_category_id, JobSubCategory.find(:all).collect {|jsc| [jsc.title, jsc.id]}, {:prompt => 'Select'}, {:class => "job_sub_category_options"}) %>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('.job_category_event_trigger').change(function() {
+      var job_category_id = $(".job_category_event_trigger").val();
+      $('.job_sub_category_options').load("/job_categories/" + job_category_id + "/job_sub_categories/options");
+    });
+  });
+</script>

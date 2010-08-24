@@ -1,0 +1,34 @@
+<%
+  hide_cancel        ||= from_dialog?
+%>
+
+<h1>Job category:  <%= @job_category.title -%></h1>
+
+<% form_for [:admin, @job_category, @job_sub_category] do |f| -%>
+  <%= f.error_messages %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :description -%>
+    <%= f.text_area :description, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+
+  <div class='form-actions<%= ' form-actions-dialog' if from_dialog? %>'>
+    <div class='form-actions-left'>
+      <%= submit_tag "Save",
+        :id => "submit_button",
+        :class => "wymupdate button" %>
+
+      <%= link_to("Cancel",
+        admin_job_category_job_sub_categories_url(@job_category),
+        :title => "cancel to loose changes",
+        :id => "cancel_button",
+        :class => "close_dialog button") unless hide_cancel %>
+    </div>
+  </div>
+
+<% end -%>

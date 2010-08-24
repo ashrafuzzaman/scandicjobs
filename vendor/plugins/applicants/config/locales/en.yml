@@ -1,0 +1,16 @@
+en:
+  admin:
+    applicants:
+      index:
+        create_new: Create a new Applicant
+        reorder: Reorder Applicants
+        reorder_done: Done Reordering Applicants
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no applicants yet. Click "Create a new Applicant" to add your first applicant.
+      singular_name:
+        view_live: View this applicant live <br/><em>(opens in a new window)</em>
+        edit: Edit this applicant
+        delete: Remove this applicant forever
+  applicants:
+    show:
+      other: Other Applicants

@@ -1,0 +1,67 @@
+<%= link_to "Back", admin_employers_path %>
+
+<% content_for :body_content_title do %>
+  <%= @employer.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Name</h3>
+    <%= @employer.name %>
+  </div>
+  
+  <div>
+    <h3>Name</h3>
+    <%= @employer.name %>
+  </div>
+  
+  <div>
+    <h3>Phone</h3>
+    <%= @employer.phone %>
+  </div>
+  
+  <div>
+    <h3>Email</h3>
+    <%= @employer.email %>
+  </div>
+  
+  <div>
+    <h3>Address</h3>
+    <%= @employer.address %>
+  </div>
+  
+  <div>
+    <h3>Job Category</h3>
+    <%= @employer.job_category.present? ? @employer.job_category.title : "n/a"%>
+  </div>
+
+  <div>
+    <h3>Job Sub Category</h3>
+    <%= @employer.job_sub_category.present? ? @employer.job_sub_category.title : "n/a"%>
+  </div>
+
+  <div>
+    <h3>Working Period</h3>
+    <%= @employer.working_period %>
+  </div>
+  
+  <div>
+    <h3>About Job</h3>
+    <%= @employer.about_job %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="employers">
+    <% @employers.each do |employer| %>
+      <li>
+        <%= link_to employer.name, employer_url(employer) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

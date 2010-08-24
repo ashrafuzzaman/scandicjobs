@@ -1,0 +1,57 @@
+<% form_for [:admin, @applicant] do |f| -%>
+  <%= f.error_messages %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :gender -%>
+    <%= f.select(:gender, ["Male", "Female"], :prompt => 'Select') %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :age -%>
+    <%= f.text_field :age -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :phone -%>
+    <%= f.text_field :phone -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :address -%>
+    <%= f.text_area :address, :size => "100x10" -%>
+  </div>
+
+  <div class='field'>
+    <%= render :partial => "/job_categories/select", :locals => {:f => f} %>
+    <%#= f.label :job_category -%>
+    <%#= f.select(:job_category_id, JobCategory.find(:all).collect {|jc| [jc.title, jc.id]}, :prompt => 'Select') %>
+    <%#= f.select(:job_sub_category_id, JobSubCategory.find(:all).collect {|jsc| [jsc.title, jsc.id]}, :prompt => 'Select') %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :free_time -%>
+    <%= f.select(:free_time, ["Day", "Night", "Both"], :prompt => 'Select') %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :language -%>
+    <%= f.select(:language, ["English", "Swedish"], :prompt => 'Select') %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :about_me -%>
+    <%= f.text_area :about_me, :size => "100x10" -%>
+  </div>
+
+  <%= render :partial => "/shared/admin/form_actions", :locals => {:f => f, :continue_editing => false} %>
+<% end -%>

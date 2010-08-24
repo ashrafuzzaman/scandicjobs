@@ -1,0 +1,77 @@
+<%= link_to "Back", admin_applicants_path %>
+
+<% content_for :body_content_title do %>
+  <%= @applicant.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+
+  <div>
+    <h3>Name</h3>
+    <%= @applicant.name %>
+  </div>
+
+  <div>
+    <h3>Gender</h3>
+    <%= @applicant.gender %>
+  </div>
+
+  <div>
+    <h3>Age</h3>
+    <%= @applicant.age %>
+  </div>
+
+  <div>
+    <h3>Phone</h3>
+    <%= @applicant.phone %>
+  </div>
+
+  <div>
+    <h3>Email</h3>
+    <%= @applicant.email %>
+  </div>
+
+  <div>
+    <h3>Address</h3>
+    <%= @applicant.address %>
+  </div>
+
+  <div>
+    <h3>Job Category</h3>
+    <%= @applicant.job_category.present? ? @applicant.job_category.title : "n/a"%>
+  </div>
+
+  <div>
+    <h3>Job Sub Category</h3>
+    <%= @applicant.job_sub_category.present? ? @applicant.job_sub_category.title : "n/a"%>
+  </div>
+
+  <div>
+    <h3>Free Time</h3>
+    <%= @applicant.free_time %>
+  </div>
+
+  <div>
+    <h3>Language</h3>
+    <%= @applicant.language %>
+  </div>
+
+  <div>
+    <h3>About Me</h3>
+    <%= @applicant.about_me %>
+  </div>
+
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="applicants">
+    <% @applicants.each do |applicant| %>
+      <li>
+        <%= link_to applicant.name, applicant_url(applicant) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

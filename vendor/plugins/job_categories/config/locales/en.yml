@@ -1,0 +1,30 @@
+en:
+  admin:
+    job_categories:
+      index:
+        create_new: Create a new Job Category
+        reorder: Reorder Job Categories
+        reorder_done: Done Reordering Job Categories
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no job_categories yet. Click "Create a new Job Category" to add your first job category.
+      singular_name:
+        view_live: View this job category live <br/><em>(opens in a new window)</em>
+        edit: Edit this job category
+        delete: Remove this job category forever
+    job_sub_categories:
+      index:
+        create_new: Create a new Job Sub Category
+        reorder: Reorder Job Sub Categories
+        reorder_done: Done Reordering Job Sub Categories
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no job_sub_categories yet. Click "Create a new Job Sub Category" to add your first job sub category.
+      singular_name:
+        view_live: View this job sub category live <br/><em>(opens in a new window)</em>
+        edit: Edit this job sub category
+        delete: Remove this job sub category forever
+  job_categories:
+    show:
+      other: Other Job Categories
+  job_sub_categories:
+    show:
+      other: Other Job Sub Categories

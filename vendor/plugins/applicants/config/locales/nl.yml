@@ -1,0 +1,16 @@
+en:
+  admin:
+    applicants:
+      index:
+        create_new: Maak een nieuwe Applicant
+        reorder: Wijzig de volgorde van de Applicants
+        reorder_done: Klaar met het wijzingen van de volgorde van de Applicants
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen applicants. Druk op 'Maak een nieuwe Applicant' om de eerste aan te maken.
+      singular_name:
+        view_live: Bekijk deze applicant op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze applicant
+        delete: Verwijder deze applicant voor eeuwig
+  applicants:
+    show:
+      other: Andere Applicants
