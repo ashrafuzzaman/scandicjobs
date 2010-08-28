@@ -28,7 +28,7 @@
     <%= render :partial => "/shared/site_bar" %>
     <div id="header">
       <h1><a href="#"><%= RefinerySetting.find_or_set(:site_name, "Nordic jobs") %></a></h1>
-      <h2><%= RefinerySetting.find_or_set(:slogan, "Slogan") %></h2>
+      <h2><i><%= RefinerySetting.find_or_set(:slogan, "Slogan") %></i></h2>
     </div>
     <div id="pages">
       <div id="slider">
