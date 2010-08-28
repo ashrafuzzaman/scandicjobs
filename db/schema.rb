@@ -1,4 +1,4 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file,
+# This file is auto-generated from the current state of the database. Instead of editing this file, 
 # please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
@@ -9,7 +9,45 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100729221735) do
+ActiveRecord::Schema.define(:version => 20100828130130) do
+
+  create_table "applicants", :force => true do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.integer  "age"
+    t.string   "phone"
+    t.string   "email"
+    t.text     "address"
+    t.integer  "job_category_id"
+    t.integer  "job_sub_category_id"
+    t.string   "free_time"
+    t.string   "language"
+    t.string   "about_me"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "city"
+    t.string   "country"
+  end
+
+  add_index "applicants", ["id"], :name => "index_applicants_on_id"
+
+  create_table "employers", :force => true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.text     "address"
+    t.integer  "job_category_id"
+    t.integer  "job_sub_category_id"
+    t.string   "working_period"
+    t.text     "about_job"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "work_address"
+  end
+
+  add_index "employers", ["id"], :name => "index_employers_on_id"
 
   create_table "images", :force => true do |t|
     t.integer  "parent_id"
@@ -45,6 +83,27 @@ ActiveRecord::Schema.define(:version => 20100729221735) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "job_categories", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "job_categories", ["id"], :name => "index_job_categories_on_id"
+
+  create_table "job_sub_categories", :force => true do |t|
+    t.string   "title"
+    t.integer  "job_category_id"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "job_sub_categories", ["id"], :name => "index_job_sub_categories_on_id"
 
   create_table "page_parts", :force => true do |t|
     t.integer  "page_id"
