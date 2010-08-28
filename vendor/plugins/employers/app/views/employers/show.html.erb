@@ -5,32 +5,32 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  
+
   <div>
     <h3>Name</h3>
     <%= @employer.name %>
   </div>
-  
-  <div>
-    <h3>Name</h3>
-    <%= @employer.name %>
-  </div>
-  
+
   <div>
     <h3>Phone</h3>
     <%= @employer.phone %>
   </div>
-  
+
   <div>
     <h3>Email</h3>
     <%= @employer.email %>
   </div>
-  
+
   <div>
-    <h3>Address</h3>
+    <h3>Company address</h3>
     <%= @employer.address %>
   </div>
-  
+
+  <div>
+    <h3>Work address</h3>
+    <%= @employer.work_address %>
+  </div>
+
   <div>
     <h3>Job Category</h3>
     <%= @employer.job_category.present? ? @employer.job_category.title : "n/a"%>
@@ -45,12 +45,12 @@
     <h3>Working Period</h3>
     <%= @employer.working_period %>
   </div>
-  
+
   <div>
     <h3>About Job</h3>
     <%= @employer.about_job %>
   </div>
-  
+
 <% end %>
 
 <% content_for :body_content_right do %>

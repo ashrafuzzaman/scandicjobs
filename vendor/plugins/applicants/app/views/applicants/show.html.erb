@@ -37,6 +37,16 @@
   </div>
 
   <div>
+    <h3>City</h3>
+    <%= @applicant.city %>
+  </div>
+
+  <div>
+    <h3>Country</h3>
+    <%= @applicant.country %>
+  </div>
+
+  <div>
     <h3>Job Category</h3>
     <%= @applicant.job_category.present? ? @applicant.job_category.title : "n/a"%>
   </div>
