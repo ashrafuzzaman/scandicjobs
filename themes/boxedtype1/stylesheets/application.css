@@ -45,7 +45,7 @@ img {
 #header {
     height: 40px;
 /*    background: #5A5A5A url(images/img01.gif) repeat-x;*/
-    background: #0058D8;
+    background: #0808A8;
 }
 
 #header h1 {
@@ -58,15 +58,15 @@ img {
 #header h2 {
     width: 760px;
     margin: -18px auto 0 auto;
+    padding-left: 350px;
     text-align: left;
-    margin-left: 460px;
     font-size: 1em;
     color: #FFFFFF;
 }
 
 #header a {
     text-decoration: none;
-    color: #FFFF00;
+    color: #F8F800;
 }
 
 /* Pages */
