@@ -8,75 +8,78 @@
   <%= f.error_messages %>
 
   <div class='field'>
-    <%= f.label :name -%>
-    <%= f.text_field :name, :class => 'larger' -%>
+    <%= f.label :first_name, "Förnamn" -%>
+    <%= f.text_field :first_name -%>
   </div>
   <br/>
 
   <div class='field'>
-    <%= f.label :gender -%>
+    <%= f.label :last_name, "Efternamn" -%>
+    <%= f.text_field :last_name -%>
+  </div>
+  <br/>
+
+  <div class='field'>
+    <%= f.label :gender, "Kön" -%>
     <%= f.select(:gender, ["Male", "Female"], :prompt => 'Select') %>
   </div>
   <br/>
 
   <div class='field'>
-    <%= f.label :age -%>
+    <%= f.label :age, "Födelsedatum (åååå-mm-dd)" -%>
     <%= f.text_field :age -%>
   </div>
   <br/>
 
   <div class='field'>
-    <%= f.label :phone -%>
-    <%= f.text_field :phone -%>
-  </div>
-  <br/>
-
-  <div class='field'>
-    <%= f.label :email -%>
-    <%= f.text_field :email -%>
-  </div>
-  <br/>
-
-  <div class='field'>
-    <%= f.label :address -%>
+    <%= f.label :address, "Adress" -%>
     <%= f.text_area :address, :size => "42x4" -%>
   </div>
   <br/>
 
   <div class='field'>
-    <%= f.label :city -%>
+    <%= f.label :city, "Stad" -%>
     <%= f.text_field :city -%>
   </div>
   <br/>
 
   <div class='field'>
-    <%= f.label :country -%>
+    <%= f.label :country, "Land" -%>
     <%= f.text_field :country -%>
   </div>
   <br/>
 
   <div class='field'>
+    <%= f.label :phone, "Telefon" -%>
+    <%= f.text_field :phone -%>
+  </div>
+  <br/>
+
+  <div class='field'>
+    <%= f.label :email, "e-post" -%>
+    <%= f.text_field :email -%>
+  </div>
+  <br/>
+
+  <div class='field'>
     <%= render :partial => "/job_categories/select", :locals => {:f => f} %>
-  <%#= f.label :job_category -%>
-  <%#= f.select(:job_category_id, JobCategory.find(:all).collect {|jc| [jc.title, jc.id]}, :prompt => 'Select') %>
-  <%#= f.select(:job_sub_category_id, JobSubCategory.find(:all).collect {|jsc| [jsc.title, jsc.id]}, :prompt => 'Select') %>
   </div>
   <br/>
 
   <div class='field'>
-    <%= f.label :free_time -%>
-    <%= f.select(:free_time, ["Day", "Night", "Both"], :prompt => 'Select') %>
+    <%= f.label :free_time, "Fritid" -%>
+    <%= f.select(:free_time, ["Heltid", "Deltid", "Enstak uppdrag", "Sommarjobb"], :prompt => 'Select') %>
   </div>
   <br/>
 
   <div class='field'>
-    <%= f.label :language -%>
-    <%= f.select(:language, ["English", "Swedish"], :prompt => 'Select') %>
+    <%= f.label :language, "Språk" -%>
+    <%= f.select(:language, ["Engelska", "Svenska"], :prompt => 'Select') %>
   </div>
   <br/>
 
   <div class='field'>
-    <%= f.label :about_me -%>
+    <%= f.label :about_me, "Om dig" -%>
     <%= f.text_area :about_me, :size => "42x4" -%>
   </div>
   <br/>
