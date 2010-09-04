@@ -1,5 +1,5 @@
 <ul>
-  <% JobCategory.all.each do |job_category| %>
+  <% JobCategory.find(:all, :order=>'position').each do |job_category| %>
     <li>
       <b><%= job_category.title %></b>
     </li>

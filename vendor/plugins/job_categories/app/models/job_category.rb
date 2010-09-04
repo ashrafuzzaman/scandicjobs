@@ -2,7 +2,7 @@ class JobCategory < ActiveRecord::Base
 
   has_many :applicants
   has_many :employers
-  has_many :job_sub_categories
+  has_many :job_sub_categories, :order=>'position'
 
   acts_as_indexed :fields => [:title, :description]
 

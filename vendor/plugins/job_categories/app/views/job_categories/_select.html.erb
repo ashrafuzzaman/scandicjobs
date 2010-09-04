@@ -1,6 +1,6 @@
 <%= f.label :job_category, "Jobb kategori" -%>
-<%= f.select(:job_category_id, JobCategory.find(:all).collect {|jc| [jc.title, jc.id]}, {:prompt => 'Select'}, {:class => "job_category_event_trigger"}) %>
-<%= f.select(:job_sub_category_id, JobSubCategory.find(:all).collect {|jsc| [jsc.title, jsc.id]}, {:prompt => 'Select'}, {:class => "job_sub_category_options"}) %>
+<%= f.select(:job_category_id, JobCategory.find(:all, :order=>'position').collect {|jc| [jc.title, jc.id]}, {:prompt => 'Select'}, {:class => "job_category_event_trigger"}) %>
+<%= f.select(:job_sub_category_id, JobSubCategory.find(:all, :order=>'position').collect {|jsc| [jsc.title, jsc.id]}, {:prompt => 'Select'}, {:class => "job_sub_category_options"}) %>
 
 <script type='text/javascript'>
   $(document).ready(function() {
