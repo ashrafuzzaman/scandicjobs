@@ -8,19 +8,19 @@
 
     <table cellpadding="5">
       <tr>
-        <td class='field'><%= f.required_label :name %></td>
+        <td class='field'><%= f.required_label :name, "Namn" %></td>
         <td><%= f.text_field :name %></td>
       </tr>
       <tr>
-        <td class='field'><%= f.required_label :email %></td>
+        <td class='field'><%= f.required_label :email, "E-post" %></td>
         <td><%= f.text_field :email %></td>
       </tr>
       <tr>
-        <td class='field'><%= f.label :phone %></td>
+        <td class='field'><%= f.label :phone, "Telefon" %></td>
         <td><%= f.text_field :phone %></td>
       </tr>
       <tr>
-        <td class='field message_field'><%= f.label :message  %></td>
+        <td class='field message_field'><%= f.label :message, "Meddelande" %></td>
         <td><%= f.text_area :message, :size => "42x4" %></td>
       </tr>
       <tr>
