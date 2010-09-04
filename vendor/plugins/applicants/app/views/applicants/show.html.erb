@@ -42,6 +42,11 @@
   </div>
 
   <div>
+    <h3>Postal Code</h3>
+    <%= @applicant.postal_code %>
+  </div>
+
+  <div>
     <h3>City</h3>
     <%= @applicant.city %>
   </div>
@@ -59,6 +64,11 @@
   <div>
     <h3>Job Sub Category</h3>
     <%= @applicant.job_sub_category.present? ? @applicant.job_sub_category.title : "n/a"%>
+  </div>
+
+  <div>
+    <h3>Serching Job In</h3>
+    <%= @applicant.serching_job_in %>
   </div>
 
   <div>

@@ -9,10 +9,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100828130130) do
+ActiveRecord::Schema.define(:version => 20100904122235) do
 
   create_table "applicants", :force => true do |t|
-    t.string   "name"
     t.string   "gender"
     t.integer  "age"
     t.string   "phone"
@@ -28,12 +27,15 @@ ActiveRecord::Schema.define(:version => 20100828130130) do
     t.datetime "updated_at"
     t.string   "city"
     t.string   "country"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "serching_job_in"
+    t.string   "postal_code"
   end
 
   add_index "applicants", ["id"], :name => "index_applicants_on_id"
 
   create_table "employers", :force => true do |t|
-    t.string   "name"
     t.string   "phone"
     t.string   "email"
     t.text     "address"
@@ -45,6 +47,10 @@ ActiveRecord::Schema.define(:version => 20100828130130) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "work_address"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "business_name"
+    t.string   "postal_code"
   end
 
   add_index "employers", ["id"], :name => "index_employers_on_id"
@@ -180,7 +186,6 @@ ActiveRecord::Schema.define(:version => 20100828130130) do
     t.datetime "created_at"
   end
 
-  add_index "slugs", ["name", "sluggable_type", "scope", "sequence"], :name => "index_slugs_on_name_and_sluggable_type_and_scope_and_sequence", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
   create_table "user_plugins", :force => true do |t|

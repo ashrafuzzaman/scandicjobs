@@ -7,6 +7,11 @@
 <% content_for :body_content_left do %>
 
   <div>
+    <h3>Business Name</h3>
+    <%= @employer.business_name %>
+  </div>
+
+  <div>
     <h3>First name</h3>
     <%= @employer.first_name %>
   </div>
@@ -29,6 +34,11 @@
   <div>
     <h3>Company address</h3>
     <%= @employer.address %>
+  </div>
+
+  <div>
+    <h3>Company Postal Code</h3>
+    <%= @employer.postal_code %>
   </div>
 
   <div>

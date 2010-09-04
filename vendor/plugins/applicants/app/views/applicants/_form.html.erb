@@ -21,7 +21,7 @@
 
   <div class='field'>
     <%= f.label :gender, "Kön" -%>
-    <%= f.select(:gender, ["Male", "Female"], :prompt => 'Select') %>
+    <%= f.select(:gender, ["Man", "Kvinna"], :prompt => 'Select') %>
   </div>
   <br/>
 
@@ -38,6 +38,12 @@
   <br/>
 
   <div class='field'>
+    <%= f.label :postal_code, "Postnummer" -%>
+    <%= f.text_field :postal_code -%>
+  </div>
+  <br/>
+
+  <div class='field'>
     <%= f.label :city, "Stad" -%>
     <%= f.text_field :city -%>
   </div>
@@ -50,7 +56,7 @@
   <br/>
 
   <div class='field'>
-    <%= f.label :phone, "Telefon" -%>
+    <%= f.label :phone, "Telefon/Mobil" -%>
     <%= f.text_field :phone -%>
   </div>
   <br/>
@@ -63,6 +69,12 @@
 
   <div class='field'>
     <%= render :partial => "/job_categories/select", :locals => {:f => f} %>
+  </div>
+  <br/>
+
+  <div class='field'>
+    <%= f.label :serching_job_in, "Söker arbete i" -%>
+    <%= f.select(:serching_job_in, ["Stockholm", "Sveige", "Scandic landet"], :prompt => 'Select') %>
   </div>
   <br/>
 

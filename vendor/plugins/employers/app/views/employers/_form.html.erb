@@ -8,6 +8,12 @@
   <%= f.error_messages %>
 
   <div class='field'>
+    <%= f.label :business_name, "Företag" -%>
+    <%= f.text_field :business_name -%>
+  </div>
+  <br/>
+
+  <div class='field'>
     Kontaktperson
   </div>
 
@@ -24,7 +30,7 @@
   <br/>
 
   <div class='field'>
-    <%= f.label :phone, "Telefon" -%>
+    <%= f.label :phone, "Telefon/Mobil" -%>
     <%= f.text_field :phone -%>
   </div>
   <br/>
@@ -38,6 +44,12 @@
   <div class='field'>
     <%= f.label :address, "Företag adress" -%>
     <%= f.text_area :address, :size => "42x4" -%>
+  </div>
+  <br/>
+
+  <div class='field'>
+    <%= f.label :postal_code, "Företag Postnummer" -%>
+    <%= f.text_field :postal_code -%>
   </div>
   <br/>
 
