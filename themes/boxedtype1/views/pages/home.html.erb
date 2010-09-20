@@ -1,15 +1,16 @@
 <div id="latest-post">
   <%= @page.present? ? @page[:body] : "" %>
 </div>
-<div id="recent-posts">
-  <h3 class="title">Testimonials</h3>
-  <%= @page.present? ? @page[:side_body] : "" %>
-</div>
-<br/>
-<br/>
-<br/>
-<div id="recent-posts">
-  <h3 class="title">Jobb kategori</h3>
-  <%= render :partial => "/shared/job_category" %>
+
+<div id="right_column">
+  <div class="recent-posts">
+    <h3 class="title">Testimonials</h3>
+    <%= @page.present? ? @page[:side_body] : "" %>
+  </div>
+  <br/>
+  <div class="recent-posts">
+    <h3 class="title">Jobb kategori</h3>
+    <%= render :partial => "/shared/job_category" %>
+  </div>
 </div>
 <div style="clear: both; height: 1px;"></div>

@@ -160,12 +160,12 @@ img {
 
 /* Recent Posts Box */
 
-#recent-posts {
+#right_column {
     float: right;
     width: 320px;
 }
 
-#recent-posts h3 {
+.recent-posts h3 {
     width: 310px;
     height: 32px;
     padding: 12px 0 0 10px;
@@ -174,18 +174,18 @@ img {
     color: #FFFFFF;
 }
 
-#recent-posts ul {
+.recent-posts ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-#recent-posts li {
+.recent-posts li {
     padding: 5px 10px;
     border-bottom: 1px solid #5A5A5A;
 }
 
-#recent-posts li:hover {
+.recent-posts li:hover {
     background: #EFEFEF;
 }
 
